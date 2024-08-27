@@ -6,6 +6,10 @@
   text-align: center;
 
 }
+.img-fondo{
+  background-size: cover; 
+  min-height:auto;
+}
 
 @keyframes App-logo-spin {
   from {

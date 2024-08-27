@@ -2,8 +2,9 @@ import React from 'react'
 
 const Historia = () => {
     return (
-        <div  className="relative bg-white border-2 border-gray-300 shadow-lg p-3" style={{ backgroundImage: `url('https://newspack-elsol.s3.amazonaws.com/wp-content/uploads/2022/09/1561589288800120IMG_0309-scaled.jpg')` }}> 
-       
+        <div  className="relative min-h-screen bg-cover bg-center bg-white border-2 border-gray-300 shadow-lg p-4" style={{ backgroundImage: `url('https://newspack-elsol.s3.amazonaws.com/wp-content/uploads/2022/09/1561589288800120IMG_0309-scaled.jpg')` }}> 
+        <div className="bg-gray-300 bg-opacity-65 absolute inset-0">
+         <div className="relative z-10 text-white p-8"> 
         <h1 className="text-5xl font-extrabold text-gray-900 mb-4"> La historia de SIDUNCU</h1>
 
             <p className="text-xl font-semibold text-gray-800">SIDUNCU es un sindicato de base de CONADU (Federación Nacional de Docentes Universitarios), que representa a los trabajadores y trabajadoras de la Universidad Nacional de Cuyo. Desde su formación, SIDUNCU ha tenido un papel activo en las negociaciones paritarias locales, asegurando la representación de sus afiliados en las mesas de negociación con las autoridades universitarias.
@@ -14,7 +15,8 @@ const Historia = () => {
                 CONADU
                 ).</p>
         </div>
-
+        </div>
+        </div>
     )
 }
 
