@@ -1,5 +1,6 @@
 // componentes/BorderScreen.js
 import React, { useState } from 'react';
+import ListaNoticias from './ListaNoticias';
 
 const BorderScreen = () => {
   const [currentSection, setCurrentSection] = useState('novedades');
@@ -20,6 +21,7 @@ const BorderScreen = () => {
       </div>
       <div className="text-azulMarino">
         {sections[currentSection]}
+      <ListaNoticias/>;
       </div>
     </div>
   );
