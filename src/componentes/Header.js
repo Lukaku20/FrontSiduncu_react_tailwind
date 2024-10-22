@@ -12,13 +12,13 @@ const Header = () => {
       />
       <div className="flex flex-wrap justify-center gap-4">
         <Link to="/indice" className="bg-blue-800 text-white py-2 px-4 rounded-lg hover:bg-sky-500 transition">
-          Índice
+          Home
         </Link>
         <Link to="/informacion-local" className="bg-blue-800 text-white py-2 px-4 rounded-lg hover:bg-sky-500 transition">
           Información Local
         </Link>
         <Link to="/navegacion" className="bg-blue-800 text-white py-2 px-4 rounded-lg hover:bg-sky-500 transition">
-          Navegación
+          Imagenes
         </Link>
         <Link to="/historia" className="bg-blue-800 text-white py-2 px-4 rounded-lg hover:bg-sky-500 transition">
           Historia
