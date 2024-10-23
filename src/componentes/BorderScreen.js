@@ -21,7 +21,7 @@ const BorderScreen = () => {
       </div>
       <div className="text-azulMarino">
         {sections[currentSection]}
-      <ListaNoticias/>;
+      <ListaNoticias/>
       </div>
     </div>
   );

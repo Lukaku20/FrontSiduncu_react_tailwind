@@ -26,10 +26,17 @@ const ListaNoticias = () => {
 
   return (
     <div>
-    <h1>Lista de Noticias!!!!!!!!!!!!!!!!!</h1>
+    <h1>Lista de Noticias</h1>
       <ul>
         {noticias.map((noticia) => (
-          <li key={noticia.id}>{noticia.titulo} - {noticia.contenido}</li>
+          <><li key={noticia.id}>{noticia.titulo} - {noticia.contenido}</li>
+          <div key={noticia.imagenUrl}> </div>
+          <img
+              src={`https://localhost:8080/imagenes/${noticia.id_imagen}`} // Ajusta la URL según tu estructura
+              alt={noticia.titulo}
+            />
+          </>
+
         ))}
       </ul>
     
