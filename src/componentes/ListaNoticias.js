@@ -1,46 +1,27 @@
-
 import React, { useEffect, useState } from 'react';
 
 const ListaNoticias = () => {
-    const [noticias, setNoticias] = useState([]);
-  
-    useEffect(() => {
-      // Llamada a la API utilizando fetch
-      fetch('http://localhost:8080/noticias/lista')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Error al obtener las noticias');
-          }
-          return response.json();
-        })
-        .then(data => {
-          setNoticias(data); 
-          console.log(data)// Actualizamos el estado con las noticias obtenidas
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    }, []); // Este array vacío e array vacío asegura que e
+  const [noticias, setNoticias] = useState([]);
 
-
+  useEffect(() => {
+    // Llamada a la API utilizando fetch
+    fetch('http://localhost:8080/noticias/lista')
+      .then(response => response.json())
+      .then(data => setNoticias(data))
+      .catch(error => console.error('Error:', error));
+  }, []);
 
   return (
     <div>
-    <h1>Lista de Noticias</h1>
-      <ul>
-        {noticias.map((noticia) => (
-          <><li key={noticia.id}>{noticia.titulo} - {noticia.contenido}</li>
-          <div key={noticia.imagenUrl}> </div>
-          <img
-              src={`https://localhost:8080/imagenes/${noticia.id_imagen}`} // Ajusta la URL según tu estructura
-              alt={noticia.titulo}
-            />
-          </>
-
-        ))}
-      </ul>
-    
+      {noticias.map(noticia => (
+        <div key={noticia.id} className="noticia">
+          <h2>{noticia.titulo}</h2>
+          <img src={noticia.imagenUrl} alt={noticia.titulo} />
+          <p>{noticia.contenido}</p>
+        </div>
+      ))}
     </div>
-  )
-    }
-    export default ListaNoticias;
+  );
+};
+
+export default ListaNoticias;
